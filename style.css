@@ -1,0 +1,124 @@
+*{
+    font-family: system-ui, sans-serif;
+}
+
+.fa-redo-alt, .fa-window-maximize , .fa-window-restore{
+    font-size: 30px;
+        }
+        .top_container{
+     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+        }
+        #Top_search{
+            width: 500px;
+    border-radius: 16px;
+    height: 30px;
+    outline: none;
+    border: none;
+    box-shadow:inset  0px 0px 20px 0px rgb(158 158 158 / 35%);
+    padding-left: 11px;
+    transition: all 0.3s easy 0s;
+        }
+        #Top_search:focus{
+    box-shadow: 0px 0px 20px 0px rgb(158 158 158 / 35%);
+
+        }
+        .container{
+            display: grid;
+    place-items: center;
+        }
+        form {
+            display: grid;
+    place-items: center;
+    display: flex;
+        }
+        img{
+            width: 432px;
+    height: 400px;
+        }
+        #bottom_search{
+            width: 450px;
+    height: 35px;
+    outline: none;
+    padding-left: 11px;
+    border: 1px solid hsl(147, 85%, 63%);
+    border-end-start-radius: 17px;
+    border-start-start-radius: 17px;
+    cursor: pointer;
+    transition: all 0.3s easy 0s;
+
+        }
+        #bottom_search:hover{
+            box-shadow: 0px 0px 5px 0px #50f199;;
+        }
+        button{
+            width: 58px;
+    height: 39px;
+    text-align: center;
+    border-bottom-right-radius: 17px;
+    border-top-right-radius: 17px;
+    font-size: 30px;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 2px 0px rgb(158 158 158 / 35%);
+    color:hsl(0, 0%, 100%);
+    background: hsl(147, 51%, 53%);
+        }
+        button:hover{
+            font-size: 28px;
+        }
+        .td{
+            font-weight: bold;
+        }
+.toggle{
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.5s;
+    font-size: 25px;
+    transition: all 0.3s easy 0s;
+
+}
+.toggle:before{
+    content:'\f185';
+    font-family: "Font Awesome 5 Free";
+}
+
+body.dark{
+    color:hsl(147, 85%, 63%);
+    background-color: hsl(0, 0%, 26%);   
+}
+body.dark .toggle:before{
+content: '\f186';
+font-family: "Font Awesome 5 Free";
+
+}
+#Top_search.dark{
+    background: #6a6a6a;
+    color: rgb(38, 245, 31);
+}
+#bottom_search.dark{
+    background: grey;
+    color: mediumspringgreen;
+}
+.fa-redo-alt:hover{
+    animation :rotate 1s linear;
+}
+
+@keyframes rotate {
+    0%{
+transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(
+            184deg
+            );
+    }
+    100%{
+        transform: rotate(360deg );
+    }
+    
+}

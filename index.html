@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BROWSER</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top_container">
+        <i class="fas fa-redo-alt"></i>
+        <i class="far fa-window-maximize"></i>
+   
+        <form action="https://www.google.com/search" method="GET" >
+        <input type="text" name="q" id="Top_search" >
+        </form>
+       
+        <i class="far fa-window-restore"></i>
+  <div class="toggle">
+  </div>
+         <div class="td">
+            <span id="t"></span><br/>
+            <span id="d"></span> 
+         </div>
+       
+</div>
+<div class="container">
+    <div class="main">
+        <img src="./img/Search engines-bro.svg" alt="search img">
+        <form action="https://www.google.com/search"  method="GET" id="form">
+        <input type="text" name="q" id="bottom_search">
+        <button type="submit">
+            <i class="fas fa-search" type="submit" ></i>
+
+        </button>
+
+</form>
+    </div>
+</div>
+    
+<script>
+
+
+
+    function TIME (){
+var time=document.getElementById("t");
+time.innerHTML=`${new Date().toLocaleTimeString()}`;
+}
+setInterval(TIME,1000)
+
+var time=document.getElementById("d")
+time.innerHTML=`${new Date().toLocaleDateString()}`;
+
+document.querySelector(".fa-redo-alt").addEventListener("click",()=>{
+    location.reload()})
+
+    document.querySelector(".fa-window-maximize").addEventListener("click",()=>{
+        window.open()})
+
+        document.querySelector(".fa-window-restore").addEventListener("click",()=>{
+            resizeWindow()
+            console.log("clicked")
+
+        })
+        var m=moment().format('LT'); 
+        const now          = new Date();
+    const hours        = now.getHours();
+    const minutes      = now.getMinutes();
+    const seconds      = now.getSeconds();
+    const milliseconds = now.getMilliseconds()
+   
+console.log(m)
+
+ if (minutes === 3 ) { 
+     good()
+ }
+
+ function good(){
+     console.log("ok")
+ }
+// if (date_date.getHours() == 19 && date_date.getMinutes() === 42 ) { 
+//     console.log("hello")
+// }
+
+    // if( date_date.getHours() === 13 &&new Date().getMinutes() === 41 ){
+    
+    // evening();
+    // evening();
+    //     }
+ 
+    
+    //  if (date_date.getHours() === 11 && date_date.getMinutes() === 18 ) {
+    //      setTimeout( morning, 1000);
+    //  } 
+    
+    //  if ( new Date().getHours() === 21 &&new Date().getMinutes() === 01){
+    //  night()
+    //  night()
+    //     }
+
+            function resizeWindow(){ 
+           window.open(" ", "", "width=300, height=200")
+            }
+
+//             function evening(){
+//                location.reload();
+//                 location.reload();
+//     Notification.requestPermission()
+//     new Notification("thidir kavigan",{body:"thanks for using this webpage good evening ",icon:"img/icon48.png"})
+//        }
+//                  function morning(){
+//   console.log("hello");
+//     //             location.reload();
+//     //  Notification.requestPermission()
+//     //  new Notification("thidir kavigan",{body:"good morning",icon:"img/icon48.png"})
+//        }
+
+//         function night(){
+//             location.reload();
+//     Notification.requestPermission()
+//     new Notification("thidir kavigan",{body:"good night",icon:"img/icon48.png"})
+//         }
+    
+var body = document.querySelector("body")
+    var Toggle = document.querySelector(".toggle");
+    var top_search = document.querySelector("#Top_search");
+    var bottom_search = document.querySelector("#bottom_search");
+
+    Toggle.onclick = function (){
+        body.classList.toggle("dark");
+       top_search.classList.toggle("dark");
+       bottom_search.classList.toggle("dark");
+    }
+</script>
+</body>
+</html>
