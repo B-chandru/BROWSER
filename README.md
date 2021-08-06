@@ -1,3 +1,3 @@
 # BROWSER. 
-
-This is a Browser like design using html5 css javascript.
+This is a browser type website where you can have the functionalities of browser by using browser api.
+It is created by using html5,css,javascript.
