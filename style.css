@@ -1,6 +1,10 @@
 *{
     font-family: system-ui, sans-serif;
 }
+body{
+    background-color: #2E4F4F;
+    color:white ;
+}
 
 .fa-redo-alt, .fa-window-maximize , .fa-window-restore{
     font-size: 30px;
